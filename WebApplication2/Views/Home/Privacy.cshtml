@@ -1,0 +1,36 @@
+﻿@{
+    ViewData["Title"] = "Privacy Policy";
+}
+<h1>@ViewData["Title"]</h1>
+
+<head>
+    <link href="@Url.Content("~/Styles/main.css")" rel="stylesheet" type="text/css" />
+</head>
+
+<p>Use this page to detail your site's privacy policy.</p>
+
+@foreach (var plane in ViewBag.Data)
+{
+    <ul>
+        <li>@plane.Company</li>
+        <li>@plane.PassangerCount</li>
+    </ul>
+}
+
+@if (ViewBag.UserName == "firkata@gmail.com")
+{
+    <div >THIS IS THE ONE</div>
+}
+else
+{
+    <div class="RedText">THINENENNE</div>
+}
+
+@if (ViewBag.UserRole == "Admin2")
+{
+    <div>Towa e</div>
+}
+else
+{
+    <div>Ne e</div>
+}
